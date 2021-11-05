@@ -1,8 +1,4 @@
 use bevy::prelude::*;
-use bevy::input::mouse::MouseButtonInput;
-use bevy::app::Events;
-use bevy::reflect::List;
-use bevy::ui::Val::Px;
 
 fn main() {
     App::build()
@@ -26,7 +22,7 @@ struct Poses {
     pos: Vec<(f32, f32)>,
 }
 
-fn startup(mut commands: Commands, mut materials: ResMut<Assets<ColorMaterial>>) {
+fn startup(mut commands: Commands) {
     commands.spawn_bundle(OrthographicCameraBundle::new_2d());
     commands.spawn_bundle(UiCameraBundle::default());
 }
